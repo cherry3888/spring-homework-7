@@ -10,7 +10,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@NamedEntityGraph(name = "author_genre_comments_entity_graph", attributeNodes = {@NamedAttributeNode("author"), @NamedAttributeNode("genre"), @NamedAttributeNode("comments")})
 @Entity
 @Table(name ="book")
 public class Book {
@@ -40,4 +39,13 @@ public class Book {
         this.genre = genre;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author=" + author +
+                ", genre=" + genre +
+                '}';
+    }
 }
